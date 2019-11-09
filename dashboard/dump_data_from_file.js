@@ -10,19 +10,6 @@ DATABASE_URL = '54.245.218.63'
 console.log('Node.js code is now running!')
 var client = new faunadb.Client({ secret: 'secret', domain: DATABASE_URL, scheme: 'http', port: '8443'});
 
-/*
-client.query(
-    q.CreateCollection({ name: 'matches_raw' })
-).then((ret) => console.log(ret))
-
-client.query(
-    q.CreateIndex({
-        name: 'all_raw_matches',
-        source: q.Collection('matches_raw')
-    })
-).then((ret) => console.log(ret))
-*/
-
 var stream = fs.createWriteStream("error.txt", {flags:'a'});
 var procesed = 0
 var attempted = 0

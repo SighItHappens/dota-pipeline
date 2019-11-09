@@ -2,7 +2,7 @@
 
 PROJECT_ROOT="$HOME/dota-pipeline"
 
-cd "$PROJECT_ROOT/data_dump" || return
+cd "$PROJECT_ROOT/data-fetcher" || return
 PROCESS_NAME=$(date +%s)
 LOG_FILE="$PROJECT_ROOT/log/make_batch.log"
 MATCH_FILE="$PROJECT_ROOT/data/serial_matches.log"
